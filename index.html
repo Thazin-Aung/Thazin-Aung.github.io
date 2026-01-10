@@ -1,187 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thazin Aung | Web Developer</title>
 
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #0b0f1a;
-      --card: #12182b;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
-      --glow: 0 0 20px rgba(139, 92, 246, 0.4);
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h2 {
-      font-size: 2.2rem;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      background: radial-gradient(circle at top, #1f2a4a, transparent 60%);
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      margin-top: 20px;
-      font-size: 1.2rem;
-      color: var(--muted);
-    }
-
-    .hero .btn {
-      margin-top: 40px;
-      display: inline-block;
-      padding: 14px 32px;
-      border-radius: 999px;
-      background: var(--gradient);
-      color: #fff;
-      font-weight: 600;
-      box-shadow: var(--glow);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .hero .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 0 30px rgba(59,130,246,0.6);
-    }
-
-    /* STATS */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: -60px;
-    }
-
-    .stat-card {
-      background: var(--card);
-      border-radius: 20px;
-      padding: 30px;
-      text-align: center;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .stat-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--glow);
-    }
-
-    .stat-card h3 {
-      font-size: 2.5rem;
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .stat-card p {
-      margin-top: 10px;
-      color: var(--muted);
-    }
-
-    /* GRID SECTIONS */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 25px;
-      border-radius: 20px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--glow);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.6rem;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  <nav class="right-menu">
+    <ul>
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <!-- HERO -->
-  <section class="hero">
-    <h1>Thazin Aung</h1>
-    <p>Senior Web Developer • Vue • Laravel • Clean Architecture</p>
-    <a href="#projects" class="btn">View My Work</a>
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="assets/my.png" alt="Thazin Aung" />
+      </div>
+
+      <div class="hero-text">
+        <h1>Thazin Aung</h1>
+        <h3>Senior Web Developer</h3>
+        <p>
+          I am a passionate web developer specializing in modern frontend and
+          backend technologies. I build clean, scalable, and user-focused web
+          applications using Vue.js, Laravel, and modern UI principles.
+        </p>
+
+        <a href="#projects" class="btn">View My Work</a>
+
+        <!-- Social Logos -->
+        <div class="social-logos" style="margin-top: 20px">
+          <a href="http://www.linkedin.com/in/thazin-aung-317722292" target="_blank">
+            <img src="assets/social/linkedin.png" alt="Linkin" class="social-icon" />
+          </a>
+          <a href="https://www.tiktok.com/@thazindevnotes?is_from_webapp=1&sender_device=pc" target="_blank">
+            <img src="assets/social/tiktok.png" alt="TikTok" class="social-icon" />
+          </a>
+          <a href="https://github.com/Thazin-Aung" target="_blank">
+            <img src="assets/social/github.png" alt="Github" class="social-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- STATS -->
   <section class="stats">
     <div class="stat-card">
-      <h3>5+</h3>
+      <h3>3+</h3>
       <p>Years Experience</p>
     </div>
     <div class="stat-card">
-      <h3>30+</h3>
+      <h3>20+</h3>
       <p>Projects Completed</p>
     </div>
     <div class="stat-card">
@@ -190,75 +74,535 @@
     </div>
   </section>
 
+  <section class="skills" id="skills">
+    <h2>My Skills</h2>
+    <p class="skills-subtitle">Technologies I work with</p>
+
+    <div class="skills-grid">
+      <!-- Example Skill Card -->
+      <div class="skill-card level-a">
+        <div class="skill-logo">
+          <img src="assets/skills/php.png" alt="PHP" />
+        </div>
+        <h4 class="skill-name">PHP</h4>
+        <div class="skill-bar">
+          <div class="skill-progress"></div>
+        </div>
+      </div>
+
+      <div class="skill-card level-a">
+        <div class="skill-logo">
+          <img src="assets/skills/js.png" alt="JavaScript" />
+        </div>
+        <h4 class="skill-name">JavaScript</h4>
+        <div class="skill-bar">
+          <div class="skill-progress"></div>
+        </div>
+      </div>
+
+      <div class="skill-card level-b">
+        <div class="skill-logo">
+          <img src="assets/skills/css.png" alt="CSS" />
+        </div>
+        <h4 class="skill-name">CSS</h4>
+        <div class="skill-bar">
+          <div class="skill-progress"></div>
+        </div>
+      </div>
+
+      <div class="skill-card level-c">
+        <div class="skill-logo">
+          <img src="assets/skills/java.png" alt="Java" />
+        </div>
+        <h4 class="skill-name">Java</h4>
+        <div class="skill-bar">
+          <div class="skill-progress"></div>
+        </div>
+      </div>
+
+      <div class="skill-card level-a">
+        <div class="skill-logo">
+          <img src="assets/skills/laravel.png" alt="Laravel" />
+        </div>
+        <h4 class="skill-name">Laravel</h4>
+        <div class="skill-bar">
+          <div class="skill-progress"></div>
+        </div>
+      </div>
+
+      <div class="skill-card level-a">
+        <div class="skill-logo">
+          <img src="assets/skills/vue.png" alt="Vue" />
+        </div>
+        <h4 class="skill-name">Vue</h4>
+        <div class="skill-bar">
+          <div class="skill-progress"></div>
+        </div>
+      </div>
+
+      <div class="skill-card level-a">
+        <div class="skill-logo">
+          <img src="assets/skills/tailwind.png" alt="Tailwind" />
+        </div>
+        <h4 class="skill-name">Tailwind</h4>
+        <div class="skill-bar">
+          <div class="skill-progress"></div>
+        </div>
+      </div>
+      <div class="skill-card level-a">
+        <div class="skill-logo">
+          <img src="assets/skills/bootstrap.png" alt="Bootstrap" />
+        </div>
+        <h4 class="skill-name">Bootstrap</h4>
+        <div class="skill-bar">
+          <div class="skill-progress"></div>
+        </div>
+      </div>
+
+      <!-- Add more skill cards similarly -->
+    </div>
+  </section>
+
   <!-- SERVICES -->
-  <section>
-    <h2>My Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Web Development</h3>
-        <p>Modern, scalable applications using Vue, Laravel, and REST APIs.</p>
+  <section id="services" class="services-section">
+    <h2 class="section-title">What I Do</h2>
+    <p class="section-subtitle">
+      Services built from real-world project experience and long-term production systems.
+    </p>
+
+    <div class="services-grid">
+
+      <!-- Full Stack Development -->
+      <div class="service-card highlight">
+        <span class="icon">💻</span>
+        <h3>Full-Stack Web Development</h3>
+        <p>
+          Design and develop scalable web applications using Laravel, Vue.js,
+          REST APIs, and modern frontend technologies.
+        </p>
+        <ul>
+          <li>Production-ready systems</li>
+          <li>Admin & user dashboards</li>
+          <li>API-first development</li>
+        </ul>
       </div>
-      <div class="card">
-        <h3>UI / UX Design</h3>
-        <p>Clean, intuitive interfaces focused on user experience.</p>
+
+      <!-- System Architecture -->
+      <div class="service-card">
+        <span class="icon">🧠</span>
+        <h3>System Architecture & Design</h3>
+        <p>
+          Design maintainable system architectures based on real delivery,
+          fanclub, and education platforms.
+        </p>
+        <ul>
+          <li>System & DB design</li>
+          <li>Role & permission modeling</li>
+          <li>Scalable workflows</li>
+        </ul>
       </div>
-      <div class="card">
-        <h3>System Architecture</h3>
-        <p>Designing maintainable and scalable systems for long-term growth.</p>
+
+      <!-- Payment Integration -->
+      <div class="service-card highlight">
+        <span class="icon">💳</span>
+        <h3>Payment Gateway Integration</h3>
+        <p>
+          Experience integrating and maintaining GMO payment systems
+          for Japanese production platforms.
+        </p>
+        <ul>
+          <li>Membership & subscription payments</li>
+          <li>Secure payment flows</li>
+          <li>QA & production support</li>
+        </ul>
       </div>
+
+      <!-- Leadership -->
+      <div class="service-card">
+        <span class="icon">👥</span>
+        <h3>Team Leadership & Project Management</h3>
+        <p>
+          Led multiple projects from planning to release, including
+          Japanese client communication.
+        </p>
+        <ul>
+          <li>Requirement definition</li>
+          <li>Task breakdown & reviews</li>
+          <li>Release & maintenance</li>
+        </ul>
+      </div>
+
+      <!-- Maintenance -->
+      <div class="service-card">
+        <span class="icon">🛠️</span>
+        <h3>System Maintenance & Enhancement</h3>
+        <p>
+          Long-term maintenance and feature enhancement for large-scale
+          platforms in production.
+        </p>
+        <ul>
+          <li>Bug fixing & refactoring</li>
+          <li>Performance optimization</li>
+          <li>Version upgrades</li>
+        </ul>
+      </div>
+
+      <!-- API & Mobile Support -->
+      <div class="service-card">
+        <span class="icon">📱</span>
+        <h3>API Development & Mobile Support</h3>
+        <p>
+          Backend API design and integration support for Flutter and
+          mobile applications.
+        </p>
+        <ul>
+          <li>REST API design</li>
+          <li>API documentation</li>
+          <li>Mobile integration support</li>
+        </ul>
+      </div>
+
     </div>
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Featured Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Resume Management System</h3>
-        <p>Vue + Inertia + Laravel platform with S3 integration.</p>
+  <section id="projects" class="projects-section">
+    <h2 class="section-title">Highlighted Projects</h2>
+    <p class="section-subtitle">
+      Selected projects demonstrating leadership, system design, and real-world production experience.
+    </p>
+
+    <div class="projects-grid">
+
+      <!-- SUGA Fanclub -->
+      <div class="project-card highlight">
+        <span class="badge">⭐⭐⭐ Highlight</span>
+        <span class="tag japan">Japan Project</span>
+
+        <h3>SUGA SHIGAO Fanclub Platform</h3>
+        <p class="role">Team Leader / Backend Architect</p>
+
+        <p class="desc">
+          Core fanclub platform for a Japanese artist. Designed system architecture,
+          implemented membership, CMS, and GMO payment integration.
+        </p>
+
+        <ul class="tech">
+          <li>Laravel</li>
+          <li>PostgreSQL</li>
+          <li>GMO Payment</li>
+        </ul>
+
+        <a href="https://www.sugamania-club.com/" target="_blank" class="btn">
+          View Project →
+        </a>
       </div>
-      <div class="card">
-        <h3>Job Matching Platform</h3>
-        <p>Role-based system with admin and client dashboards.</p>
+
+      <!-- BESPER Fanclub -->
+      <div class="project-card highlight">
+        <span class="badge">⭐⭐⭐ Highlight</span>
+        <span class="tag japan">Japan Project</span>
+
+        <h3>BESPER Band Fanclub</h3>
+        <p class="role">Team Leader</p>
+
+        <p class="desc">
+          Customized and extended the SUGA fanclub architecture for another Japanese
+          music band with payment and content systems.
+        </p>
+
+        <ul class="tech">
+          <li>Laravel</li>
+          <li>PostgreSQL</li>
+          <li>GMO Payment</li>
+        </ul>
+
+        <a href="https://www.besperband.com/" target="_blank" class="btn">
+          View Project →
+        </a>
       </div>
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>High-performance static site deployed on GitHub Pages.</p>
+
+      <!-- Mall Plus -->
+      <div class="project-card">
+        <span class="tag scale">Large Scale</span>
+
+        <h3>Mall Plus Food Delivery System</h3>
+        <p class="role">Backend Developer</p>
+
+        <p class="desc">
+          Large-scale food delivery platform similar to Foodpanda.
+          Worked on order flow, delivery logic, finance processes, and API integration.
+        </p>
+
+        <ul class="tech">
+          <li>Laravel</li>
+          <li>Vue.js</li>
+          <li>REST API</li>
+        </ul>
       </div>
+
+      <!-- M-Job -->
+      <div class="project-card">
+        <span class="tag freelance">Freelance</span>
+
+        <h3>M-Job CV Platform</h3>
+        <p class="role">Team Leader</p>
+
+        <p class="desc">
+          Resume & CV generation system with role-based access
+          for users, admins, and clients.
+        </p>
+
+        <ul class="tech">
+          <li>Laravel</li>
+          <li>Vue</li>
+          <li>Inertia</li>
+        </ul>
+      </div>
+
+      <!-- SMS School Management System -->
+      <div class="project-card">
+        <span class="tag scale">Large Scale</span>
+
+        <h3>SMS School Management System (CGM)</h3>
+        <p class="role">Full-Stack Developer</p>
+
+        <p class="desc">
+          Large-scale school management system used by multiple schools across Myanmar.
+          Implemented role & permission management, feature development, and API support
+          for mobile applications.
+        </p>
+
+        <ul class="tech">
+          <li>Laravel</li>
+          <li>Vue.js</li>
+          <li>REST API</li>
+        </ul>
+
+        <a href="https://sms.bib-mall.com/" target="_blank" class="btn">
+          View Project →
+        </a>
+      </div>
+
+      <!-- TrendHub E-commerce -->
+      <div class="project-card">
+        <span class="tag leadership">Team Lead</span>
+
+        <h3>TrendHub E-commerce Platform (SEJ)</h3>
+        <p class="role">Team Leader / Full-Stack Developer</p>
+
+        <p class="desc">
+          One-month challenge project where I led a 4-member team to build a complete
+          e-commerce system including database design, UI/UX, and merchant backend.
+        </p>
+
+        <ul class="tech">
+          <li>PHP</li>
+          <li>PostgreSQL</li>
+          <li>jQuery</li>
+        </ul>
+
+        <a href="https://github.com/Dora-maker/trend_hub" target="_blank" class="btn">
+          View Source →
+        </a>
+      </div>
+
+
     </div>
   </section>
+
 
   <!-- ARTICLES -->
-  <section>
-    <h2>Articles</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Clean Code in Laravel</h3>
-        <p>Best practices for maintainable backend systems.</p>
-      </div>
-      <div class="card">
-        <h3>Vue Performance Tips</h3>
-        <p>Optimizing frontend performance in real projects.</p>
-      </div>
+  <section id="articles" class="articles-section">
+    <h2 class="section-title">Articles & Writing</h2>
+    <p class="section-subtitle">
+      Sharing lessons from real projects, backend development,
+      and leadership experiences.
+    </p>
+
+    <div class="articles-grid">
+
+      <article class="article-card">
+        <span class="tag">Case Study</span>
+        <h3>How I Designed a Fanclub System for Japanese Clients</h3>
+        <p>
+          A deep dive into system architecture, requirements,
+          and communication challenges.
+        </p>
+        <a href="#">Read Article →</a>
+      </article>
+
+      <article class="article-card">
+        <span class="tag">Backend</span>
+        <h3>GMO Payment Integration: Real Production Lessons</h3>
+        <p>
+          Practical issues and solutions when integrating payments
+          in live Japanese platforms.
+        </p>
+        <a href="#">Read Article →</a>
+      </article>
+
+      <article class="article-card">
+        <span class="tag">Leadership</span>
+        <h3>My First Experience Leading a Japan Project</h3>
+        <p>
+          What leadership really means beyond writing code.
+        </p>
+        <a href="#">Read Article →</a>
+      </article>
+
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section>
-    <h2>More About Me</h2>
-    <div class="card">
+
+  <!-- ABOUT ME -->
+  <section id="about" class="about-section">
+    <h2 class="section-title">More About Me</h2>
+
+    <div class="about-content">
       <p>
-        I am a senior web developer with strong experience in Vue.js, Laravel,
-        and modern frontend architectures. I enjoy building clean, scalable,
-        and user-focused applications while continuously improving code quality
-        and system design.
+        I’m <strong>Thazin Aung</strong>, a Senior Web Developer with hands-on experience
+        building and maintaining real-world production systems across
+        education platforms, food delivery services, and Japanese fanclub websites.
+      </p>
+
+      <p>
+        My core strength lies in <strong>backend development with Laravel</strong>,
+        system and database design, and API-driven architectures.
+        I also work comfortably on the frontend using Vue.js and Angular,
+        ensuring smooth collaboration between user interfaces and backend services.
+      </p>
+
+      <p>
+        I have led multiple projects from planning to release, including
+        <strong>direct communication with Japanese clients</strong>,
+        requirement definition, task breakdown, and code reviews.
+        I enjoy mentoring teammates and taking responsibility for delivering
+        stable, scalable solutions.
+      </p>
+
+      <p>
+        Beyond development, I’m passionate about <strong>sharing programming knowledge</strong>
+        through content creation and continuous learning.
+        I’m currently focused on improving my technical depth,
+        strengthening my Japanese language skills,
+        and growing as a freelance developer and technical content creator.
       </p>
     </div>
   </section>
+  <!-- CONTENT CREATOR -->
+  <section id="creator" class="creator-section">
+    <h2 class="section-title">Content Creator Journey</h2>
+    <p class="section-subtitle">
+      Sharing programming knowledge and real-world experience with the community.
+    </p>
 
-  <footer>
-    © 2026 Thazin Aung • All Rights Reserved
-  </footer>
+    <div class="creator-timeline">
 
+      <div class="timeline-item">
+        <span class="dot"></span>
+        <div class="timeline-content">
+          <h3>Started Sharing Programming Content</h3>
+          <span class="date">2024</span>
+          <p>
+            Began creating short-form programming content on TikTok,
+            focusing on Laravel, backend concepts, and real project experiences.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="dot"></span>
+        <div class="timeline-content">
+          <h3>Real-Project Based Tutorials</h3>
+          <span class="date">2025</span>
+          <p>
+            Shared lessons learned from Japanese fanclub systems,
+            payment integration, and production maintenance.
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="dot"></span>
+        <div class="timeline-content">
+          <h3>Growing as a Technical Educator</h3>
+          <span class="date">Present</span>
+          <p>
+            Continuing to build content around backend architecture,
+            clean code, and career growth for junior developers.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="https://www.tiktok.com/@thazindevnotes" target="_blank" class="creator-cta">
+      Follow my journey on TikTok →
+    </a>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+
+      <!-- Left -->
+      <div class="contact-text">
+        <h2>Let’s Work Together</h2>
+        <p>
+          I’m always open to discussing new projects, freelance opportunities,
+          or collaboration with international and Japanese teams.
+        </p>
+
+        <div class="contact-info">
+          <div class="info-item">
+            <span class="icon">📧</span>
+            <a href="mailto:taung2459@gmail.com">taung2459@gmail.com</a>
+          </div>
+
+          <div class="info-item">
+            <span class="icon">📞</span>
+            <a href="tel:+959757867679">+95 975 786 7679</a>
+          </div>
+
+          <div class="info-item">
+            <span class="icon">💼</span>
+            <a href="https://www.linkedin.com/in/thazin-aung-317722292" target="_blank">
+              LinkedIn Profile
+            </a>
+          </div>
+
+          <div class="info-item">
+            <span class="icon">🎥</span>
+            <a href="https://www.tiktok.com/@thazindevnotes" target="_blank">
+              @thazindevnotes
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right -->
+      <div class="contact-card">
+        <h3>Quick Info</h3>
+
+        <ul>
+          <li><strong>Name:</strong> Thazin Aung</li>
+          <li><strong>Role:</strong> Senior Web Developer</li>
+          <li><strong>Location:</strong> Yangon, Myanmar</li>
+          <li><strong>Experience:</strong> Japan Projects · Large-scale Systems</li>
+        </ul>
+
+        <a href="mailto:taung2459@gmail.com" class="contact-btn">
+          Send Email →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer>© 2026 Thazin Aung • All Rights Reserved</footer>
 </body>
+
 </html>
