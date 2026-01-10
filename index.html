@@ -5,10 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thazin Aung | Web Developer</title>
-
   <!-- Google Font -->
+  <!-- Body -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
+  <!-- Headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="/script.js"></script>
 </head>
 
 <body>
@@ -32,9 +35,9 @@
       </div>
 
       <div class="hero-text">
-        <h1>Thazin Aung</h1>
+        <h1 class="gradient-text">Thazin Aung</h1>
         <h3>Senior Web Developer</h3>
-        <p>
+        <p id="hero-typing">
           I am a passionate web developer specializing in modern frontend and
           backend technologies. I build clean, scalable, and user-focused web
           applications using Vue.js, Laravel, and modern UI principles.
@@ -75,12 +78,12 @@
   </section>
 
   <section class="skills" id="skills">
-    <h2>My Skills</h2>
+    <h2 class="section-title">My Skills</h2>
     <p class="skills-subtitle">Technologies I work with</p>
 
     <div class="skills-grid">
       <!-- Example Skill Card -->
-      <div class="skill-card level-a">
+      <div class="skill-card level-a slide-left">
         <div class="skill-logo">
           <img src="assets/skills/php.png" alt="PHP" />
         </div>
@@ -90,7 +93,7 @@
         </div>
       </div>
 
-      <div class="skill-card level-a">
+      <div class="skill-card level-a slide-left">
         <div class="skill-logo">
           <img src="assets/skills/js.png" alt="JavaScript" />
         </div>
@@ -100,7 +103,7 @@
         </div>
       </div>
 
-      <div class="skill-card level-b">
+      <div class="skill-card level-b slide-right">
         <div class="skill-logo">
           <img src="assets/skills/css.png" alt="CSS" />
         </div>
@@ -110,7 +113,7 @@
         </div>
       </div>
 
-      <div class="skill-card level-c">
+      <div class="skill-card level-c slide-right">
         <div class="skill-logo">
           <img src="assets/skills/java.png" alt="Java" />
         </div>
@@ -120,7 +123,7 @@
         </div>
       </div>
 
-      <div class="skill-card level-a">
+      <div class="skill-card level-a slide-left">
         <div class="skill-logo">
           <img src="assets/skills/laravel.png" alt="Laravel" />
         </div>
@@ -130,7 +133,7 @@
         </div>
       </div>
 
-      <div class="skill-card level-a">
+      <div class="skill-card level-a slide-left">
         <div class="skill-logo">
           <img src="assets/skills/vue.png" alt="Vue" />
         </div>
@@ -140,7 +143,7 @@
         </div>
       </div>
 
-      <div class="skill-card level-a">
+      <div class="skill-card level-a slide-right">
         <div class="skill-logo">
           <img src="assets/skills/tailwind.png" alt="Tailwind" />
         </div>
@@ -149,7 +152,7 @@
           <div class="skill-progress"></div>
         </div>
       </div>
-      <div class="skill-card level-a">
+      <div class="skill-card level-a slide-right">
         <div class="skill-logo">
           <img src="assets/skills/bootstrap.png" alt="Bootstrap" />
         </div>
@@ -167,11 +170,11 @@
   <section id="services" class="services-section">
     <h2 class="section-title">What I Do</h2>
     <p class="section-subtitle">
-      Services built from real-world project experience and long-term production systems.
+      Services built from real-world project experience and long-term
+      production systems.
     </p>
 
     <div class="services-grid">
-
       <!-- Full Stack Development -->
       <div class="service-card highlight">
         <span class="icon">💻</span>
@@ -207,8 +210,8 @@
         <span class="icon">💳</span>
         <h3>Payment Gateway Integration</h3>
         <p>
-          Experience integrating and maintaining GMO payment systems
-          for Japanese production platforms.
+          Experience integrating and maintaining GMO payment systems for
+          Japanese production platforms.
         </p>
         <ul>
           <li>Membership & subscription payments</li>
@@ -222,8 +225,8 @@
         <span class="icon">👥</span>
         <h3>Team Leadership & Project Management</h3>
         <p>
-          Led multiple projects from planning to release, including
-          Japanese client communication.
+          Led multiple projects from planning to release, including Japanese
+          client communication.
         </p>
         <ul>
           <li>Requirement definition</li>
@@ -252,8 +255,8 @@
         <span class="icon">📱</span>
         <h3>API Development & Mobile Support</h3>
         <p>
-          Backend API design and integration support for Flutter and
-          mobile applications.
+          Backend API design and integration support for Flutter and mobile
+          applications.
         </p>
         <ul>
           <li>REST API design</li>
@@ -261,7 +264,6 @@
           <li>Mobile integration support</li>
         </ul>
       </div>
-
     </div>
   </section>
 
@@ -269,11 +271,11 @@
   <section id="projects" class="projects-section">
     <h2 class="section-title">Highlighted Projects</h2>
     <p class="section-subtitle">
-      Selected projects demonstrating leadership, system design, and real-world production experience.
+      Selected projects demonstrating leadership, system design, and
+      real-world production experience.
     </p>
 
     <div class="projects-grid">
-
       <!-- SUGA Fanclub -->
       <div class="project-card highlight">
         <span class="badge">⭐⭐⭐ Highlight</span>
@@ -283,8 +285,9 @@
         <p class="role">Team Leader / Backend Architect</p>
 
         <p class="desc">
-          Core fanclub platform for a Japanese artist. Designed system architecture,
-          implemented membership, CMS, and GMO payment integration.
+          Core fanclub platform for a Japanese artist. Designed system
+          architecture, implemented membership, CMS, and GMO payment
+          integration.
         </p>
 
         <ul class="tech">
@@ -307,8 +310,8 @@
         <p class="role">Team Leader</p>
 
         <p class="desc">
-          Customized and extended the SUGA fanclub architecture for another Japanese
-          music band with payment and content systems.
+          Customized and extended the SUGA fanclub architecture for another
+          Japanese music band with payment and content systems.
         </p>
 
         <ul class="tech">
@@ -330,8 +333,8 @@
         <p class="role">Backend Developer</p>
 
         <p class="desc">
-          Large-scale food delivery platform similar to Foodpanda.
-          Worked on order flow, delivery logic, finance processes, and API integration.
+          Large-scale food delivery platform similar to Foodpanda. Worked on
+          order flow, delivery logic, finance processes, and API integration.
         </p>
 
         <ul class="tech">
@@ -349,8 +352,8 @@
         <p class="role">Team Leader</p>
 
         <p class="desc">
-          Resume & CV generation system with role-based access
-          for users, admins, and clients.
+          Resume & CV generation system with role-based access for users,
+          admins, and clients.
         </p>
 
         <ul class="tech">
@@ -368,9 +371,9 @@
         <p class="role">Full-Stack Developer</p>
 
         <p class="desc">
-          Large-scale school management system used by multiple schools across Myanmar.
-          Implemented role & permission management, feature development, and API support
-          for mobile applications.
+          Large-scale school management system used by multiple schools across
+          Myanmar. Implemented role & permission management, feature
+          development, and API support for mobile applications.
         </p>
 
         <ul class="tech">
@@ -392,8 +395,9 @@
         <p class="role">Team Leader / Full-Stack Developer</p>
 
         <p class="desc">
-          One-month challenge project where I led a 4-member team to build a complete
-          e-commerce system including database design, UI/UX, and merchant backend.
+          One-month challenge project where I led a 4-member team to build a
+          complete e-commerce system including database design, UI/UX, and
+          merchant backend.
         </p>
 
         <ul class="tech">
@@ -406,28 +410,24 @@
           View Source →
         </a>
       </div>
-
-
     </div>
   </section>
-
 
   <!-- ARTICLES -->
   <section id="articles" class="articles-section">
     <h2 class="section-title">Articles & Writing</h2>
     <p class="section-subtitle">
-      Sharing lessons from real projects, backend development,
-      and leadership experiences.
+      Sharing lessons from real projects, backend development, and leadership
+      experiences.
     </p>
 
     <div class="articles-grid">
-
       <article class="article-card">
         <span class="tag">Case Study</span>
         <h3>How I Designed a Fanclub System for Japanese Clients</h3>
         <p>
-          A deep dive into system architecture, requirements,
-          and communication challenges.
+          A deep dive into system architecture, requirements, and
+          communication challenges.
         </p>
         <a href="#">Read Article →</a>
       </article>
@@ -436,8 +436,8 @@
         <span class="tag">Backend</span>
         <h3>GMO Payment Integration: Real Production Lessons</h3>
         <p>
-          Practical issues and solutions when integrating payments
-          in live Japanese platforms.
+          Practical issues and solutions when integrating payments in live
+          Japanese platforms.
         </p>
         <a href="#">Read Article →</a>
       </article>
@@ -445,68 +445,76 @@
       <article class="article-card">
         <span class="tag">Leadership</span>
         <h3>My First Experience Leading a Japan Project</h3>
-        <p>
-          What leadership really means beyond writing code.
-        </p>
+        <p>What leadership really means beyond writing code.</p>
         <a href="#">Read Article →</a>
       </article>
-
     </div>
   </section>
-
 
   <!-- ABOUT ME -->
   <section id="about" class="about-section">
     <h2 class="section-title">More About Me</h2>
 
     <div class="about-content">
-      <p>
-        I’m <strong>Thazin Aung</strong>, a Senior Web Developer with hands-on experience
-        building and maintaining real-world production systems across
-        education platforms, food delivery services, and Japanese fanclub websites.
-      </p>
+      <!-- Text content on the left -->
+      <div class="about-text">
+        <p>
+          I’m <strong>Thazin Aung</strong>, a Senior Web Developer with hands-on
+          experience building and maintaining real-world production systems
+          across education platforms, food delivery services, and Japanese
+          fanclub websites.
+        </p>
 
-      <p>
-        My core strength lies in <strong>backend development with Laravel</strong>,
-        system and database design, and API-driven architectures.
-        I also work comfortably on the frontend using Vue.js and Angular,
-        ensuring smooth collaboration between user interfaces and backend services.
-      </p>
+        <p>
+          My core strength lies in
+          <strong>backend development with Laravel</strong>, system and database
+          design, and API-driven architectures. I also work comfortably on the
+          frontend using Vue.js and Angular, ensuring smooth collaboration
+          between user interfaces and backend services.
+        </p>
 
-      <p>
-        I have led multiple projects from planning to release, including
-        <strong>direct communication with Japanese clients</strong>,
-        requirement definition, task breakdown, and code reviews.
-        I enjoy mentoring teammates and taking responsibility for delivering
-        stable, scalable solutions.
-      </p>
+        <p>
+          I have led multiple projects from planning to release, including
+          <strong>direct communication with clients</strong>,
+          requirement definition, task breakdown, and code reviews. I enjoy
+          mentoring teammates and taking responsibility for delivering stable,
+          scalable solutions.
+        </p>
 
-      <p>
-        Beyond development, I’m passionate about <strong>sharing programming knowledge</strong>
-        through content creation and continuous learning.
-        I’m currently focused on improving my technical depth,
-        strengthening my Japanese language skills,
-        and growing as a freelance developer and technical content creator.
-      </p>
+        <p>
+          Beyond development, I’m passionate about
+          <strong>sharing programming knowledge</strong>
+          through content creation and continuous learning. I’m currently
+          focused on improving my technical depth, strengthening my Japanese
+          language skills, and growing as a freelance developer and technical
+          content creator.
+        </p>
+      </div>
+
+      <!-- Image on the right -->
+      <div class="about-photo">
+        <img src="assets/me.png" alt="Thazin Aung" />
+      </div>
     </div>
   </section>
+
   <!-- CONTENT CREATOR -->
   <section id="creator" class="creator-section">
     <h2 class="section-title">Content Creator Journey</h2>
     <p class="section-subtitle">
-      Sharing programming knowledge and real-world experience with the community.
+      Sharing programming knowledge and real-world experience with the
+      community.
     </p>
 
     <div class="creator-timeline">
-
       <div class="timeline-item">
         <span class="dot"></span>
         <div class="timeline-content">
           <h3>Started Sharing Programming Content</h3>
           <span class="date">2024</span>
           <p>
-            Began creating short-form programming content on TikTok,
-            focusing on Laravel, backend concepts, and real project experiences.
+            Began creating short-form programming content on TikTok, focusing
+            on Laravel, backend concepts, and real project experiences.
           </p>
         </div>
       </div>
@@ -517,8 +525,8 @@
           <h3>Real-Project Based Tutorials</h3>
           <span class="date">2025</span>
           <p>
-            Shared lessons learned from Japanese fanclub systems,
-            payment integration, and production maintenance.
+            Shared lessons learned from Japanese fanclub systems, payment
+            integration, and production maintenance.
           </p>
         </div>
       </div>
@@ -529,12 +537,11 @@
           <h3>Growing as a Technical Educator</h3>
           <span class="date">Present</span>
           <p>
-            Continuing to build content around backend architecture,
-            clean code, and career growth for junior developers.
+            Continuing to build content around backend architecture, clean
+            code, and career growth for junior developers.
           </p>
         </div>
       </div>
-
     </div>
 
     <a href="https://www.tiktok.com/@thazindevnotes" target="_blank" class="creator-cta">
@@ -542,14 +549,12 @@
     </a>
   </section>
 
-
   <!-- CONTACT -->
   <section id="contact" class="contact-section">
     <div class="contact-container">
-
       <!-- Left -->
       <div class="contact-text">
-        <h2>Let’s Work Together</h2>
+        <h2 class="section-title">Let’s Work Together</h2>
         <p>
           I’m always open to discussing new projects, freelance opportunities,
           or collaboration with international and Japanese teams.
@@ -590,19 +595,24 @@
           <li><strong>Name:</strong> Thazin Aung</li>
           <li><strong>Role:</strong> Senior Web Developer</li>
           <li><strong>Location:</strong> Yangon, Myanmar</li>
-          <li><strong>Experience:</strong> Japan Projects · Large-scale Systems</li>
+          <li>
+            <strong>Experience:</strong> Japan Projects · Large-scale Systems
+          </li>
         </ul>
 
         <a href="mailto:taung2459@gmail.com" class="contact-btn">
           Send Email →
         </a>
       </div>
-
     </div>
   </section>
 
-
   <footer>© 2026 Thazin Aung • All Rights Reserved</footer>
+  <div class="bg-effects">
+    <div class="energy blue"></div>
+    <div class="energy purple"></div>
+    <div class="energy yellow"></div>
+  </div>
 </body>
 
 </html>
