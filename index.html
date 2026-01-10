@@ -2,197 +2,263 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Thazin Aung | Senior Web Developer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thazin Aung | Web Developer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    :root {
+      --bg: #0b0f1a;
+      --card: #12182b;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      --glow: 0 0 20px rgba(139, 92, 246, 0.4);
+    }
+
+    * {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
 
-    a { color: #93c5fd; text-decoration: none; }
-
-    header {
-      padding: 100px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #2563eb, #7c3aed);
-    }
-
-    header h1 {
-      font-size: 46px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 20px;
-      max-width: 900px;
-      margin: auto;
-      opacity: 0.95;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
     section {
-      max-width: 1100px;
+      padding: 80px 20px;
+      max-width: 1200px;
       margin: auto;
-      padding: 70px 20px;
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 25px;
-      border-bottom: 2px solid #334155;
-      padding-bottom: 10px;
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      text-align: center;
     }
 
-    .skills span {
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(circle at top, #1f2a4a, transparent 60%);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    .hero .btn {
+      margin-top: 40px;
       display: inline-block;
-      background: #1e293b;
-      padding: 8px 14px;
-      margin: 6px;
+      padding: 14px 32px;
+      border-radius: 999px;
+      background: var(--gradient);
+      color: #fff;
+      font-weight: 600;
+      box-shadow: var(--glow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .hero .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 30px rgba(59,130,246,0.6);
+    }
+
+    /* STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: -60px;
+    }
+
+    .stat-card {
+      background: var(--card);
       border-radius: 20px;
-      font-size: 14px;
+      padding: 30px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    .project {
-      background: #020617;
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
+    .stat-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--glow);
     }
 
+    .stat-card h3 {
+      font-size: 2.5rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .stat-card p {
+      margin-top: 10px;
+      color: var(--muted);
+    }
+
+    /* GRID SECTIONS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 25px;
+      border-radius: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--glow);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 40px 20px;
-      background: #020617;
-      opacity: 0.8;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.6rem;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <h1>Thazin Aung</h1>
-  <p>
-    Senior Web Developer · Laravel · Vue.js · Angular · API Design ·
-    Team Leadership · Japan Projects
-  </p>
-</header>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Thazin Aung</h1>
+    <p>Senior Web Developer • Vue • Laravel • Clean Architecture</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
 
-<section>
-  <h2>About Me</h2>
-  <p>
-    Hello, I’m Thazin Aung, a Senior Web Developer with a strong foundation in
-    Software Engineering and Japanese language studies.
-  </p>
-  <p>
-    I have extensive experience in backend development using Laravel,
-    frontend development with Vue.js and Angular, and API integration
-    for large-scale systems.
-  </p>
-  <p>
-    I have led and contributed to projects such as Japanese fanclub platforms,
-    school management systems, food delivery platforms, and freelance systems
-    like M-Job. My responsibilities range from system design and development
-    to team leadership and direct client communication.
-  </p>
-</section>
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat-card">
+      <h3>5+</h3>
+      <p>Years Experience</p>
+    </div>
+    <div class="stat-card">
+      <h3>30+</h3>
+      <p>Projects Completed</p>
+    </div>
+    <div class="stat-card">
+      <h3>20+</h3>
+      <p>Happy Clients</p>
+    </div>
+  </section>
 
-<section>
-  <h2>Core Skills</h2>
+  <!-- SERVICES -->
+  <section>
+    <h2>My Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Modern, scalable applications using Vue, Laravel, and REST APIs.</p>
+      </div>
+      <div class="card">
+        <h3>UI / UX Design</h3>
+        <p>Clean, intuitive interfaces focused on user experience.</p>
+      </div>
+      <div class="card">
+        <h3>System Architecture</h3>
+        <p>Designing maintainable and scalable systems for long-term growth.</p>
+      </div>
+    </div>
+  </section>
 
-  <h3>Backend</h3>
-  <div class="skills">
-    <span>PHP</span>
-    <span>Laravel</span>
-    <span>REST API</span>
-    <span>MySQL</span>
-    <span>PostgreSQL</span>
-  </div>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Resume Management System</h3>
+        <p>Vue + Inertia + Laravel platform with S3 integration.</p>
+      </div>
+      <div class="card">
+        <h3>Job Matching Platform</h3>
+        <p>Role-based system with admin and client dashboards.</p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>High-performance static site deployed on GitHub Pages.</p>
+      </div>
+    </div>
+  </section>
 
-  <h3>Frontend</h3>
-  <div class="skills">
-    <span>JavaScript</span>
-    <span>Vue.js</span>
-    <span>Angular</span>
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>Bootstrap</span>
-    <span>Tailwind</span>
-  </div>
+  <!-- ARTICLES -->
+  <section>
+    <h2>Articles</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Clean Code in Laravel</h3>
+        <p>Best practices for maintainable backend systems.</p>
+      </div>
+      <div class="card">
+        <h3>Vue Performance Tips</h3>
+        <p>Optimizing frontend performance in real projects.</p>
+      </div>
+    </div>
+  </section>
 
-  <h3>Tools & Others</h3>
-  <div class="skills">
-    <span>Git / GitHub</span>
-    <span>Postman</span>
-    <span>Figma</span>
-    <span>Docker (basic)</span>
-    <span>Vagrant</span>
-    <span>Apache</span>
-  </div>
-</section>
+  <!-- ABOUT -->
+  <section>
+    <h2>More About Me</h2>
+    <div class="card">
+      <p>
+        I am a senior web developer with strong experience in Vue.js, Laravel,
+        and modern frontend architectures. I enjoy building clean, scalable,
+        and user-focused applications while continuously improving code quality
+        and system design.
+      </p>
+    </div>
+  </section>
 
-<section>
-  <h2>Highlighted Projects</h2>
-
-  <div class="project">
-    <h3>SUGA SHIGAO Fanclub (Japan Project)</h3>
-    <p>
-      Team Leader for a Japanese artist fanclub platform.
-      Designed and developed backend using Laravel, implemented
-      membership management, content system, and GMO payment integration.
-    </p>
-    <p>
-      Role: Team Leader · Backend Lead · Client Communication
-    </p>
-    <a href="https://www.sugamania-club.com/" target="_blank">Live Site</a>
-  </div>
-
-  <div class="project">
-    <h3>M-Job (Freelance Project)</h3>
-    <p>
-      Led the project end-to-end as Team Leader.
-      Built a CV management and resume generation system using
-      Laravel, Vue, and Inertia.js.
-    </p>
-    <p>
-      Role: Team Leader · Full Stack Developer
-    </p>
-  </div>
-
-  <div class="project">
-    <h3>School Management Systems</h3>
-    <p>
-      Developed and maintained large-scale school systems with role-based
-      access (students, teachers, parents, admins).
-      Integrated APIs for mobile applications.
-    </p>
-  </div>
-</section>
-
-<section>
-  <h2>Experience</h2>
-  <ul>
-    <li><strong>CGM Golden Land Co., Ltd</strong> — Aug 2024 ~ Present</li>
-    <li><strong>FoodMall Myanmar Co., Ltd</strong> — Nov 2023 ~ Aug 2024</li>
-    <li><strong>Ex;braiN Co., Ltd</strong> — Internship (2023)</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:taung2459@gmail.com">taung2459@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/thazin-aung-317722292" target="_blank">LinkedIn Profile</a></p>
-  <p>TikTok: <a href="https://www.tiktok.com/@thazindevnotes" target="_blank">@thazindevnotes</a></p>
-  <p>GitHub: <a href="https://github.com/Thazin-Aung" target="_blank">github.com/Thazin-Aung</a></p>
-</section>
-
-<footer>
-  © 2026 Thazin Aung · Senior Web Developer
-</footer>
+  <footer>
+    © 2026 Thazin Aung • All Rights Reserved
+  </footer>
 
 </body>
 </html>
