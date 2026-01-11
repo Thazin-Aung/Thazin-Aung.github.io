@@ -96,8 +96,8 @@ h2 {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid transparent;
-  background: linear-gradient(#0b0f1a, #0b0f1a) padding-box,
-    var(--gradient) border-box;
+  background: linear-gradient(#240e3dad, #0b0f1a) padding-box,
+  var(--gradient) border-box;
   box-shadow: var(--glow);
 }
 
@@ -138,6 +138,7 @@ h2 {
   box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
 }
 
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .hero-content {
@@ -148,6 +149,90 @@ h2 {
 
   .hero-text h1 {
     font-size: 2.4rem;
+  }
+}
+
+.hero-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Social icons common style */
+.social-icons-fixed a {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #00aaff, #00ffb4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  cursor: pointer;
+}
+
+/* Icon images */
+.social-icons-fixed a img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #0b0f1a;
+}
+
+/* Different floating animations for each icon */
+.social-icons-fixed a:nth-child(1) {
+  top: -15px; 
+  left: -15px;
+  animation: float1 5s ease-in-out infinite alternate;
+}
+
+.social-icons-fixed a:nth-child(2) {
+  top: -10px; 
+  right: -10px;
+  animation: float2 6s ease-in-out infinite alternate;
+}
+
+.social-icons-fixed a:nth-child(3) {
+  bottom: -10px; 
+  right: -10px;
+  animation: float3 4s ease-in-out infinite alternate;
+}
+
+/* Keyframes for individual floating */
+@keyframes float1 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes float2 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes float3 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+/* Hover effect */
+.social-icons-fixed a:hover {
+  transform: translateY(-10px) scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.7);
+}
+
+/* Mobile: same positions but slightly smaller */
+@media (max-width: 768px) {
+  .social-icons-fixed a {
+    width: 45px;
+    height: 45px;
+  }
+
+  .social-icons-fixed a img {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -233,6 +318,33 @@ h2 {
   width: 60%;
   background: #ffb400;
   /* yellow */
+}
+
+/* ===============================
+   Skills - Mobile (2 columns)
+================================ */
+@media (max-width: 768px) {
+  .skills {
+    padding: 70px 6%;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .skill-card {
+    padding: 20px 12px;
+  }
+
+  .skill-logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
 }
 
 /* STATS */
@@ -379,7 +491,6 @@ footer {
   padding: 10px;
 }
 
-/* Top-center horizontal menu */
 .right-menu {
   position: fixed;
   top: 20px;
@@ -474,33 +585,99 @@ footer {
   scrollbar-color: rgba(59, 130, 246, 0.6) rgba(255, 255, 255, 0.05);
 }
 
-/* Small screen - horizontal floating menu */
+/* Hide menu-toggle by default (desktop) */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
-  .right-menu {
-    top: auto;
-    bottom: 20px;
-    right: 50%;
-    transform: translateX(50%);
-    flex-direction: row;
-    max-height: 50px;
-    padding: 10px 20px;
-    border-radius: 50px;
-    overflow-x: auto;
-    gap: 12px;
+
+  /* Show toggle button */
+  .menu-toggle {
+    display: flex;
+    position: fixed;
+    top: 20px;       /* top-right corner */
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 1200;
+    background: #020617;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.35);
   }
 
+  /* Hamburger lines */
+  .menu-toggle span {
+    width: 22px;
+    height: 2px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate open/close */
+  .menu-toggle.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Right-side vertical menu hidden by default */
+  .right-menu {
+    top: 60px; /* below hamburger button */
+    right: 12px;
+    left: auto;
+    transform: translateX(120%);
+    flex-direction: column;
+    max-height: 70vh;
+    padding: 14px 10px;
+    border-radius: 24px;
+    overflow-y: auto;
+    gap: 8px;
+    background: rgba(18, 24, 43, 0.25);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+    z-index: 1100;
+  }
+
+  /* Open menu */
+  .right-menu.open {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Vertical menu links */
   .right-menu ul {
-    display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 6px;
   }
 
   .right-menu ul li a {
-    padding: 8px 12px;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+    padding: 10px 14px;
   }
 
-  .right-menu ul li a.active::before {
-    display: none;
+  .right-menu ul li a:hover {
+    transform: translateX(-4px);
+  }
+
+  .right-menu ul li a.active {
+    transform: translateX(-6px);
   }
 }
 
@@ -732,7 +909,7 @@ footer {
 }
 
 .contact-card {
-  background: #020617;
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(148, 163, 184, 0.25);
   border-radius: 20px;
   padding: 2.5rem 2rem;
@@ -792,22 +969,24 @@ footer {
 /* Photo on the right */
 .about-photo {
   order: 2;
-  /* ensure image is on the right */
   flex: 1 1 250px;
   max-width: 300px;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   opacity: 0;
   transform: translateX(50px);
-  /* slide from right */
   transition: all 0.8s ease-out;
+  box-shadow: 0 0 15px rgba(0, 170, 255, 0.3); /* subtle glow */
 }
 
 .about-photo img {
   width: 100%;
   height: auto;
   display: block;
+  border: 1px solid transparent;
+  background: linear-gradient(#240e3dad, #0b0f1a) padding-box,
+  var(--gradient) border-box;
+  box-shadow: var(--glow);
 }
 
 /* Text on the left */
@@ -841,19 +1020,19 @@ footer {
   }
 }
 
-.creator-section {
+.career-section {
   padding: 6rem 2rem;
   color: #fff;
   text-align: center;
 }
 
-.creator-timeline {
+.career-timeline {
   max-width: 800px;
   margin: 4rem auto;
   position: relative;
 }
 
-.creator-timeline::before {
+.career-timeline::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -877,12 +1056,73 @@ footer {
 
 .timeline-content {
   width: 45%;
-  background: #020617;
+  background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(148, 163, 184, 0.25);
   padding: 1.5rem;
   border-radius: 16px;
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+.timeline-item.highlight .timeline-content {
+  border-color: rgba(99, 102, 241, 0.6);
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0.9),
+    #020617
+  );
+}
+/* ===============================
+   Mobile Timeline (<= 768px)
+================================ */
+@media (max-width: 768px) {
+  .career-section {
+    padding: 4rem 1rem;
+  }
+
+  .career-timeline {
+    margin: 3rem auto;
+  }
+
+  /* Move center line to left */
+  .career-timeline::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 50px;
+  }
+
+  .timeline-content {
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .timeline-item .dot {
+    left: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
 
 .dot {
   position: absolute;
@@ -897,51 +1137,6 @@ footer {
 .date {
   font-size: 0.75rem;
   color: #94a3b8;
-}
-
-.articles-section {
-  padding: 6rem 2rem;
-  color: #fff;
-}
-
-.articles-grid {
-  max-width: 1100px;
-  margin: 4rem auto 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.article-card {
-  background: #020617;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  border-radius: 18px;
-  padding: 2rem;
-}
-
-.article-card .tag {
-  font-size: 0.7rem;
-  padding: 4px 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.12);
-}
-
-.article-card h3 {
-  margin: 1rem 0 0.5rem;
-  font-size: 1.1rem;
-}
-
-.article-card p {
-  font-size: 0.9rem;
-  color: #cbd5f5;
-  margin-bottom: 1.2rem;
-}
-
-.article-card a {
-  color: #fde047;
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
 }
 
 section {
@@ -1164,4 +1359,103 @@ section {
   100% {
     background-position: 0% 50%;
   }
+}
+
+
+/* ===============================
+   Contact Section - Mobile
+================================ */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 4rem 1.25rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-text h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .contact-text p {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .contact-info {
+    gap: 1rem;
+  }
+
+  .info-item {
+    font-size: 0.95rem;
+  }
+
+  .contact-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .contact-card li {
+    font-size: 0.95rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+.info-item a {
+  padding: 0.3rem 0;
+  display: inline-block;
+}
+
+.contact-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Initial state for slide animations */
+.slide-left, .slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-left {
+  transform: translateX(-50px);
+}
+
+.slide-right {
+  transform: translateX(50px);
+}
+
+/* When visible, slide in and fade */
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional: fade-up effect for contact items */
+.contact-text, .contact-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.contact-text.visible, .contact-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

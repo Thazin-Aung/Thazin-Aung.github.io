@@ -21,17 +21,39 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#articles">Articles</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#career">Career</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+  <!-- Mobile Menu Toggle -->
+  <button class="menu-toggle" aria-label="Open menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
 
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-content">
-      <div class="hero-image">
-        <img src="assets/my.png" alt="Thazin Aung" />
+      <div class="hero-image-wrapper">
+        <div class="hero-image">
+          <img src="assets/my.png" alt="Thazin Aung" />
+        </div>
+
+        <!-- Floating social icons -->
+        <div class="social-icons-fixed">
+          <a href="http://www.linkedin.com/in/thazin-aung-317722292" target="_blank">
+            <img src="assets/social/linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="https://www.tiktok.com/@thazindevnotes" target="_blank">
+            <img src="assets/social/tiktok.png" alt="TikTok" />
+          </a>
+          <a href="https://github.com/Thazin-Aung" target="_blank">
+            <img src="assets/social/github.jpg" alt="Github" />
+          </a>
+        </div>
       </div>
 
       <div class="hero-text">
@@ -44,19 +66,6 @@
         </p>
 
         <a href="#projects" class="btn">View My Work</a>
-
-        <!-- Social Logos -->
-        <div class="social-logos" style="margin-top: 20px">
-          <a href="http://www.linkedin.com/in/thazin-aung-317722292" target="_blank">
-            <img src="assets/social/linkedin.png" alt="Linkin" class="social-icon" />
-          </a>
-          <a href="https://www.tiktok.com/@thazindevnotes?is_from_webapp=1&sender_device=pc" target="_blank">
-            <img src="assets/social/tiktok.png" alt="TikTok" class="social-icon" />
-          </a>
-          <a href="https://github.com/Thazin-Aung" target="_blank">
-            <img src="assets/social/github.png" alt="Github" class="social-icon" />
-          </a>
-        </div>
       </div>
     </div>
   </section>
@@ -413,44 +422,6 @@
     </div>
   </section>
 
-  <!-- ARTICLES -->
-  <section id="articles" class="articles-section">
-    <h2 class="section-title">Articles & Writing</h2>
-    <p class="section-subtitle">
-      Sharing lessons from real projects, backend development, and leadership
-      experiences.
-    </p>
-
-    <div class="articles-grid">
-      <article class="article-card">
-        <span class="tag">Case Study</span>
-        <h3>How I Designed a Fanclub System for Japanese Clients</h3>
-        <p>
-          A deep dive into system architecture, requirements, and
-          communication challenges.
-        </p>
-        <a href="#">Read Article →</a>
-      </article>
-
-      <article class="article-card">
-        <span class="tag">Backend</span>
-        <h3>GMO Payment Integration: Real Production Lessons</h3>
-        <p>
-          Practical issues and solutions when integrating payments in live
-          Japanese platforms.
-        </p>
-        <a href="#">Read Article →</a>
-      </article>
-
-      <article class="article-card">
-        <span class="tag">Leadership</span>
-        <h3>My First Experience Leading a Japan Project</h3>
-        <p>What leadership really means beyond writing code.</p>
-        <a href="#">Read Article →</a>
-      </article>
-    </div>
-  </section>
-
   <!-- ABOUT ME -->
   <section id="about" class="about-section">
     <h2 class="section-title">More About Me</h2>
@@ -493,58 +464,131 @@
 
       <!-- Image on the right -->
       <div class="about-photo">
-        <img src="assets/me.png" alt="Thazin Aung" />
+        <img src="assets/me-removebg-preview.png" alt="Thazin Aung" />
       </div>
     </div>
   </section>
 
-  <!-- CONTENT CREATOR -->
-  <section id="creator" class="creator-section">
-    <h2 class="section-title">Content Creator Journey</h2>
+  <!-- CAREER JOUREY -->
+  <section id="career" class="career-section">
+    <h2 class="section-title">Career Journey</h2>
     <p class="section-subtitle">
-      Sharing programming knowledge and real-world experience with the
-      community.
+      From engineering foundations to professional software development,
+      content creation, and freelancing.
     </p>
 
-    <div class="creator-timeline">
+    <div class="career-timeline">
+
+      <!-- Education -->
       <div class="timeline-item">
         <span class="dot"></span>
         <div class="timeline-content">
-          <h3>Started Sharing Programming Content</h3>
-          <span class="date">2024</span>
+          <h3>Engineering Foundation</h3>
+          <span class="date">2017 – 2020</span>
           <p>
-            Began creating short-form programming content on TikTok, focusing
-            on Laravel, backend concepts, and real project experiences.
+            Studied <strong>Electronic Circuit and Communication</strong> at
+            Technological University (Taungoo), building strong analytical and
+            problem-solving skills.
           </p>
         </div>
       </div>
 
+      <!-- Courses -->
       <div class="timeline-item">
         <span class="dot"></span>
         <div class="timeline-content">
-          <h3>Real-Project Based Tutorials</h3>
-          <span class="date">2025</span>
+          <h3>Software Engineering & Japanese (SEJ)</h3>
+          <span class="date">Aug 2022 – Oct 2023</span>
           <p>
-            Shared lessons learned from Japanese fanclub systems, payment
-            integration, and production maintenance.
+            Full Scholarship winner. Intensive training in
+            <strong>Software Engineering</strong>, <strong>Java</strong>,
+            backend fundamentals, and Japanese IT communication.
+          </p>
+        </div>
+      </div>
+      <!-- Certifications -->
+      <div class="timeline-item">
+        <span class="dot"></span>
+        <div class="timeline-content">
+          <h3>Professional Certifications</h3>
+          <span class="date">2022 – 2025</span>
+          <p>
+            Completed <strong>Java SE Course</strong> and
+            <strong>Software Engineering Course (SEJ)</strong> at
+            <strong>Ex;braiN</strong> on February 19, 2024.
           </p>
         </div>
       </div>
 
+      <!-- Internship -->
       <div class="timeline-item">
         <span class="dot"></span>
         <div class="timeline-content">
-          <h3>Growing as a Technical Educator</h3>
+          <h3>Software Engineer Intern – Ex;braiN Co., Ltd</h3>
+          <span class="date">Sep 2023 – Oct 2023</span>
+          <p>
+            2-month internship working on real projects, learning team workflows,
+            backend development, and production-level coding standards.
+          </p>
+        </div>
+      </div>
+
+      <!-- First Job -->
+      <div class="timeline-item">
+        <span class="dot"></span>
+        <div class="timeline-content">
+          <h3>Software Engineer – FoodMall Myanmar</h3>
+          <span class="date">Nov 2023 – Aug 2024</span>
+          <p>
+            10 months of professional experience developing and maintaining
+            business systems, improving backend logic, and supporting live
+            operations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Current Job -->
+      <div class="timeline-item highlight">
+        <span class="dot"></span>
+        <div class="timeline-content">
+          <h3>Software Engineer – CGM Golden Land Co., Ltd</h3>
+          <span class="date">Aug 2024 – Present</span>
+          <p>
+            Currently working on scalable systems, real-world business logic,
+            clean architecture, and long-term system maintenance.
+          </p>
+        </div>
+      </div>
+
+      <!-- Content Creator -->
+      <div class="timeline-item highlight">
+        <span class="dot"></span>
+        <div class="timeline-content">
+          <h3>TikTok Content Creator</h3>
+          <span class="date">2025 – Present</span>
+          <p>
+            Sharing programming knowledge, Laravel backend concepts, real project
+            experience, and career advice for junior developers.
+          </p>
+        </div>
+      </div>
+
+      <!-- Freelancer -->
+      <div class="timeline-item highlight">
+        <span class="dot"></span>
+        <div class="timeline-content">
+          <h3>Freelance Developer</h3>
           <span class="date">Present</span>
           <p>
-            Continuing to build content around backend architecture, clean
-            code, and career growth for junior developers.
+            Taking freelance projects including web systems, backend APIs,
+            admin panels, and custom business solutions.
           </p>
         </div>
       </div>
+
     </div>
 
-    <a href="https://www.tiktok.com/@thazindevnotes" target="_blank" class="creator-cta">
+    <a href="https://www.tiktok.com/@thazindevnotes" target="_blank" class="career-cta">
       Follow my journey on TikTok →
     </a>
   </section>
@@ -553,7 +597,7 @@
   <section id="contact" class="contact-section">
     <div class="contact-container">
       <!-- Left -->
-      <div class="contact-text">
+      <div class="contact-text slide-left">
         <h2 class="section-title">Let’s Work Together</h2>
         <p>
           I’m always open to discussing new projects, freelance opportunities,
@@ -588,7 +632,7 @@
       </div>
 
       <!-- Right -->
-      <div class="contact-card">
+      <div class="contact-card slide-right">
         <h3>Quick Info</h3>
 
         <ul>

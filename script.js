@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Skills animation
+    // ===== Skills Animation =====
     const skillCards = document.querySelectorAll('.skill-card');
-    const observer = new IntersectionObserver(
+    const skillObserver = new IntersectionObserver(
         (entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
+                    skillObserver.unobserve(entry.target);
                 }
             });
         },
@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     skillCards.forEach((card, index) => {
         card.classList.add(index % 2 === 0 ? 'slide-right' : 'slide-left');
-        observer.observe(card);
+        skillObserver.observe(card);
     });
 
-    // Services animation
+    // ===== Services Animation =====
     const serviceCards = document.querySelectorAll('.service-card');
     const serviceObserver = new IntersectionObserver(
         (entries) => {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     serviceCards.forEach((card) => serviceObserver.observe(card));
 
-    // Projects animation
+    // ===== Projects Animation =====
     const projectCards = document.querySelectorAll('.project-card');
     const projectObserver = new IntersectionObserver(
         (entries) => {
@@ -47,10 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
     );
     projectCards.forEach((card) => projectObserver.observe(card));
 
-    // Animate About Me photo & text
+    // ===== About Me Animation =====
     const aboutPhoto = document.querySelector('.about-photo');
     const aboutText = document.querySelector('.about-text');
-
     const aboutObserver = new IntersectionObserver(
         (entries) => {
             entries.forEach(entry => {
@@ -62,19 +61,53 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         { threshold: 0.3 }
     );
-
     aboutObserver.observe(aboutPhoto);
     aboutObserver.observe(aboutText);
 
-    // Scroll spy for active menu
+    // ===== Career Section Animation =====
+    const careerItems = document.querySelectorAll('.career-timeline .timeline-item');
+    const careerObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    careerObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.3 }
+    );
+    careerItems.forEach((item, index) => {
+        item.classList.add(index % 2 === 0 ? 'slide-left' : 'slide-right');
+        careerObserver.observe(item);
+    });
+
+    // ===== Contact Section Animation =====
+    const contactItems = document.querySelectorAll('.contact-section .contact-text, .contact-section .contact-card');
+    const contactObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    contactObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.3 }
+    );
+    contactItems.forEach((item, index) => {
+        item.classList.add(index % 2 === 0 ? 'slide-left' : 'slide-right');
+        contactObserver.observe(item);
+    });
+
+    // ===== Scroll Spy =====
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.right-menu ul li a');
 
     window.addEventListener('scroll', () => {
         let current = '';
-
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100; // adjust offset
+            const sectionTop = section.offsetTop - 100;
             const sectionHeight = section.offsetHeight;
             if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
                 current = section.getAttribute('id');
@@ -89,4 +122,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ===== Hamburger Toggle =====
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".right-menu");
+
+    toggle.addEventListener("click", () => {
+        toggle.classList.toggle("open");
+        menu.classList.toggle("open");
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            toggle.classList.remove("open");
+            menu.classList.remove("open");
+        });
+    });
 });
