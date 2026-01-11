@@ -137,4 +137,15 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.remove("open");
         });
     });
+
+    const heroImage = document.querySelector(".hero-image-wrapper");
+    const heroText = document.querySelector(".hero-text");
+
+    setTimeout(() => {
+      heroImage.classList.add("visible"); // image zoom-out & slide-up
+    }, 200);
+
+    setTimeout(() => {
+      heroText.classList.add("visible"); // text slide-down
+    }, 400);
 });

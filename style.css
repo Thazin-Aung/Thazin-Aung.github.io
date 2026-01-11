@@ -163,6 +163,31 @@ h2 {
   display: inline-block;
 }
 
+/* HERO IMAGE ZOOM-OUT ANIMATION */
+.hero-image-wrapper {
+  opacity: 0;
+  transform: translateY(50px) scale(1.3); /* start lower & zoomed in */
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* When visible: normal position and scale */
+.hero-image-wrapper.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* HERO TEXT SLIDE-IN FROM TOP */
+.hero-text {
+  opacity: 0;
+  transform: translateY(-50px); /* slide from top */
+  transition: all 1s ease-out;
+}
+
+.hero-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Social icons common style */
 .social-icons-fixed a {
   position: absolute;
