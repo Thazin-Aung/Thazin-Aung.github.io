@@ -14,6 +14,12 @@
   font-family: "Inter", sans-serif;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 /* ===== GLOBAL BACKGROUND ===== */
 body {
   background: radial-gradient(circle at top left, #0f172a, #020617 60%);
